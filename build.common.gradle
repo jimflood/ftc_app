@@ -18,6 +18,7 @@
 import java.util.regex.Pattern
 
 apply plugin: 'com.android.application'
+apply plugin: 'groovyx.android'
 
 def useProguard = false
 
@@ -80,7 +81,7 @@ android {
             // Disable debugging for release versions so it can be uploaded to Google Play.
             //debuggable true
             ndk {
-                abiFilters "armeabi-v7a"
+                abiFilters "armeabi-v7a", "x86"
             }
 
             if (useProguard) {
@@ -95,7 +96,7 @@ android {
             jniDebuggable true
             renderscriptDebuggable true
             ndk {
-                abiFilters "armeabi-v7a"
+                abiFilters "armeabi-v7a", "x86"
             }
 
             if (useProguard) {

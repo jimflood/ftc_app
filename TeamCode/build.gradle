@@ -10,3 +10,7 @@
 // Custom definitions may go here
 // Include common definitions from above.
 apply from: '../build.common.gradle'
+
+dependencies {
+    testImplementation("org.spockframework:spock-core:1.2-groovy-2.4")
+}
